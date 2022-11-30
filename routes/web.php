@@ -25,5 +25,5 @@ Route::get('/auth/redirect', [authController::class, "redirect"])->middleware('g
 Route::get('/auth/callback', [authController::class, "callback"])->middleware('guest');
 Route::get('/auth/logout', [authController::class, 'logout']);
 Route::get('/dashboard', function () {
-    return 'Selamat Datang ' . Auth::user()->name . ' di Halaman Dashboard';
+    return view('dashboard.index');
 })->middleware('auth');
