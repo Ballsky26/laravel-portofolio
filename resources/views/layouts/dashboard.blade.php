@@ -55,6 +55,8 @@
 
     <link rel="stylesheet" href="{{ asset('admin') }}/vendor/libs/apex-charts/apex-charts.css" />
 
+   
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
     <!-- Page CSS -->
 
     <!-- Helpers -->
@@ -86,9 +88,10 @@
             <div class="container-xxl flex-grow-1 container-p-y">
               <div class="row">
                 <div class="col-lg-12 mb-4 order-0">
+                <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">@yield('title') / </span>@yield('subtitle')</h4>
                   <div class="card">
                     <div class="d-flex align-items-end row">
-                      <div class="col-sm-7">
+                      <div class="col-sm-12">
                         <div class="card-body">
                          @yield('content')
                         </div>
@@ -143,5 +146,12 @@
 
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+    <script>
+      $(document).ready(function() {
+       $('#summernote').summernote();
+        });
+    </script>
   </body>
 </html>

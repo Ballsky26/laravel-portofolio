@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\halaman;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class halamanController extends Controller
 {
@@ -13,7 +15,12 @@ class halamanController extends Controller
      */
     public function index()
     {
-        //
+        $data = halaman::orderBy('judul', 'asc')->get();
+        return view('dashboard.halaman.index', [
+            'title' => 'Layout',
+            'subtitle' => 'Halaman',
+            'data' => $data
+        ]);
     }
 
     /**
@@ -23,7 +30,10 @@ class halamanController extends Controller
      */
     public function create()
     {
-        //
+        return view('dashboard.halaman.create', [
+            'title' => 'Layout',
+            'subtitle' => 'Halaman Tambah',
+        ]);
     }
 
     /**
@@ -34,7 +44,26 @@ class halamanController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Session::flash('judul', $request->judul);
+        Session::flash('isi', $request->isi);
+        $request->validate(
+            [
+                'judul' => 'required',
+                'isi' => 'required'
+            ],
+            [
+                'judul.required' => 'Judul belum diisi',
+                'isi.required' => 'Isian tulisan belum diisi',
+            ]
+        );
+
+        $data = [
+            'judul' => $request->judul,
+            'isi' => $request->isi,
+        ];
+
+        halaman::create($data);
+        return redirect()->route('halaman.index')->with('success', 'Berhasil menambahkan Data');
     }
 
     /**
@@ -56,7 +85,12 @@ class halamanController extends Controller
      */
     public function edit($id)
     {
-        //
+        $data = halaman::where('id', $id)->first();
+        return view('dashboard.halaman.edit', [
+            'title' => 'Layout',
+            'subtitle' => 'Halaman Edit',
+            'data' => $data
+        ]);
     }
 
     /**
@@ -68,7 +102,24 @@ class halamanController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate(
+            [
+                'judul' => 'required',
+                'isi' => 'required'
+            ],
+            [
+                'judul.required' => 'Judul belum diisi',
+                'isi.required' => 'Isian tulisan belum diisi',
+            ]
+        );
+
+        $data = [
+            'judul' => $request->judul,
+            'isi' => $request->isi,
+        ];
+
+        halaman::where('id', $id)->update($data);
+        return redirect()->route('halaman.index')->with('success', 'Berhasil mengubah Data');
     }
 
     /**
@@ -79,6 +130,7 @@ class halamanController extends Controller
      */
     public function destroy($id)
     {
-        //
+        halaman::where('id', $id)->delete();
+        return redirect()->route('halaman.index')->with('success', 'Berhasil hapus Data');
     }
 }
