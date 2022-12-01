@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\halaman;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
+use RealRashid\SweetAlert\Facades\Alert;
+
 
 class halamanController extends Controller
 {
@@ -63,6 +65,7 @@ class halamanController extends Controller
         ];
 
         halaman::create($data);
+        Alert::success('Success', 'Berhasil Menambahkan Data');
         return redirect()->route('halaman.index')->with('success', 'Berhasil menambahkan Data');
     }
 
@@ -119,6 +122,7 @@ class halamanController extends Controller
         ];
 
         halaman::where('id', $id)->update($data);
+        Alert::success('Success', 'Berhasil Mengubah Data');
         return redirect()->route('halaman.index')->with('success', 'Berhasil mengubah Data');
     }
 
@@ -131,6 +135,7 @@ class halamanController extends Controller
     public function destroy($id)
     {
         halaman::where('id', $id)->delete();
+        Alert::success('Success', 'Berhasil Menghapus Data');
         return redirect()->route('halaman.index')->with('success', 'Berhasil hapus Data');
     }
 }

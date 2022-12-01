@@ -160,5 +160,8 @@
        $('#summernote').summernote();
         });
     </script>
+    
+    @include('sweetalert::alert')
+
   </body>
 </html>
