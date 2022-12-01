@@ -77,7 +77,12 @@ class halamanController extends Controller
      */
     public function show($id)
     {
-        //
+        $halaman = halaman::find($id);
+        return view('dashboard.halaman.show', [
+            'title' => 'Layout',
+            'subtitle' => 'Halaman Detail',
+            'halaman' => $halaman
+        ]);
     }
 
     /**

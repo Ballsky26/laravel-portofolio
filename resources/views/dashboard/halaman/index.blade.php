@@ -23,7 +23,8 @@
         <tr>
             <td>{{$key + 1}}</th>
             <td>{{ $item->judul }}</td>
-            <td><a href="{{ route('halaman.edit', $item->id) }}" class="btn btn-warning btn-sm">Edit</a>
+            <td><a href="{{ route('halaman.show', $item->id) }}" class="btn btn-secondary btn-sm">Detail</a>
+            <a href="{{ route('halaman.edit', $item->id) }}" class="btn btn-warning btn-sm">Edit</a>
                 <form onsubmit="return confirm('Yakin hapus data ini?')" method="post" action="{{ route('halaman.destroy', $item->id) }}" class="d-inline">
                     @csrf
                     @method('DELETE')

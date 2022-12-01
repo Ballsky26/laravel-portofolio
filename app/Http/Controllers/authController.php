@@ -6,6 +6,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
+use RealRashid\SweetAlert\Facades\Alert;
 use Laravel\Socialite\Facades\Socialite;
 
 class authController extends Controller
@@ -42,6 +43,7 @@ class authController extends Controller
                 ]
             );
             Auth::login($user);
+            Alert::success('Success', 'Berhasil Login');
             return redirect()->to('dashboard');
         } else {
             return redirect()->to('auth')->with('error', 'Akun yang kamu masukkan tidak di izinkan masuk untuk menggunakan Halaman Admin');
@@ -50,6 +52,7 @@ class authController extends Controller
     public function logout()
     {
         Auth::logout();
+        Alert::success('Success', 'Berhasil Logout');
         return redirect()->to('auth');
     }
 }
