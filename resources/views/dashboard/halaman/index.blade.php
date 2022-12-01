@@ -10,7 +10,7 @@
 <div class="alert alert-success">{{ Session::get('success') }}</div>
 @endif
 <a href="{{ route('halaman.create') }}" class="btn btn-primary btn-sm mb-3">Tambah Halaman</a>
-    <table class="table">
+    <table class="table" id="myTable">
       <thead>
         <tr>
           <th class="col-1">No</th>
