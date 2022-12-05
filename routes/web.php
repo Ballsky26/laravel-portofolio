@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\authController;
+use App\Http\Controllers\educationController;
+use App\Http\Controllers\experienceController;
 use App\Http\Controllers\halamanController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -30,5 +32,7 @@ Route::prefix('dashboard')->middleware('auth')->group(
     function () {
         Route::get('/', [halamanController::class, 'index']);
         Route::resource('halaman', halamanController::class);
+        Route::resource('experience', experienceController::class);
+        Route::resource('education', educationController::class);
     }
 );

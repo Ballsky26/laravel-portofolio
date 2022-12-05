@@ -79,10 +79,18 @@
           </li> --}}
 
           <!-- Layouts -->
-          <li class="menu-item active">
-            <a href="{{ route('halaman.index') }} "class="menu-link">
+          <li class="menu-item">
+            <a href="{{ route('halaman.index') }} "class="menu-link active">
               <i class="menu-icon tf-icons bx bx-layout"></i>
               <div data-i18n="Layouts">Layout</div>
+            </a>
+            <a href="{{ route('experience.index') }}" class="menu-link">
+              <i class="menu-icon tf-icons bx bx-dock-top"></i>
+              <div data-i18n="Account Settings">Experience</div>
+            </a>
+            <a href="{{ route('education.index') }}" class="menu-link">
+              <i class="menu-icon tf-icons bx bx-detail"></i>
+              <div data-i18n="Form Elements">Education</div>
             </a>
           </li>
 
@@ -90,10 +98,7 @@
             <span class="menu-header-text">Pages</span>
           </li>
           <li class="menu-item">
-            <a href="javascript:void(0);" class="menu-link menu-toggle">
-              <i class="menu-icon tf-icons bx bx-dock-top"></i>
-              <div data-i18n="Account Settings">Account Settings</div>
-            </a>
+           
             <ul class="menu-sub">
               <li class="menu-item">
                 <a href="pages-account-settings-account.html" class="menu-link">
