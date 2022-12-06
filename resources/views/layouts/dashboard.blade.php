@@ -55,8 +55,33 @@
 
     <link rel="stylesheet" href="{{ asset('admin') }}/vendor/libs/apex-charts/apex-charts.css" />
 
-   <link rel="stylesheet" href="//cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="//cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css">
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+    
+
+    <!-- Token Field -->
+
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+<link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tokenfield/0.12.0/css/bootstrap-tokenfield.css"
+    integrity="sha512-wcf2ifw+8xI4FktrSorGwO7lgRzGx1ld97ySj1pFADZzFdcXTIgQhHMTo7tQIADeYdRRnAjUnF00Q5WTNmL3+A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<style>
+    .tokenfield .token {
+        margin: -1px 1px 1px 1px;
+        height: 25px;
+        line-height: 22px;
+        color: #fff;
+        background-color: #0b5ed7
+    }
+
+    .tokenfield .token a {
+        color: #FFFFFF;
+        text-decoration: none;
+    }
+</style>
     <!-- Page CSS -->
 
     <!-- Helpers -->
@@ -160,6 +185,15 @@
        $('#summernote').summernote();
         });
     </script>
+
+       <!-- Token Field -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tokenfield/0.12.0/bootstrap-tokenfield.js"></script>
+    
+   @stack('child-scripts')
+  
+   
+  
     
     @include('sweetalert::alert')
 

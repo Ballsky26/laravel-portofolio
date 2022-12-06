@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 05 Des 2022 pada 16.31
+-- Waktu pembuatan: 06 Des 2022 pada 17.23
 -- Versi server: 10.4.25-MariaDB
 -- Versi PHP: 8.1.10
 
@@ -45,6 +45,28 @@ INSERT INTO `halaman` (`id`, `judul`, `isi`, `created_at`, `updated_at`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Struktur dari tabel `metadata`
+--
+
+CREATE TABLE `metadata` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `meta_key` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `meta_value` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data untuk tabel `metadata`
+--
+
+INSERT INTO `metadata` (`id`, `meta_key`, `meta_value`, `created_at`, `updated_at`) VALUES
+(4, '_language', 'HTML, PHP, javascript, codeigniter, php, css3', '2022-12-06 15:46:57', '2022-12-06 16:06:30'),
+(6, '_workflow', '<ul><li>Gitlab</li><li>Github</li></ul>', '2022-12-06 15:49:14', '2022-12-06 16:06:03');
+
+-- --------------------------------------------------------
+
+--
 -- Struktur dari tabel `migrations`
 --
 
@@ -65,7 +87,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (4, '2022_11_30_135533_user_add_column_avatar', 4),
 (5, '2022_11_30_140617_create_halamen_table', 5),
 (6, '2022_12_05_132421_create_riwayats_table', 6),
-(7, '2022_12_05_220815_riwayat_set_default_isi', 7);
+(7, '2022_12_05_220815_riwayat_set_default_isi', 7),
+(8, '2022_12_06_220751_create_metadata_table', 8);
 
 -- --------------------------------------------------------
 
@@ -133,6 +156,12 @@ ALTER TABLE `halaman`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indeks untuk tabel `metadata`
+--
+ALTER TABLE `metadata`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indeks untuk tabel `migrations`
 --
 ALTER TABLE `migrations`
@@ -162,10 +191,16 @@ ALTER TABLE `halaman`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
+-- AUTO_INCREMENT untuk tabel `metadata`
+--
+ALTER TABLE `metadata`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
 -- AUTO_INCREMENT untuk tabel `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT untuk tabel `riwayat`

@@ -92,6 +92,10 @@
               <i class="menu-icon tf-icons bx bx-detail"></i>
               <div data-i18n="Form Elements">Education</div>
             </a>
+            <a href="{{ route('skill.index') }}" class="menu-link">
+              <i class="menu-icon tf-icons bx bx-cube-alt"></i>
+              <div data-i18n="Misc">Skill</div>
+            </a>
           </li>
 
           <li class="menu-header small text-uppercase">
