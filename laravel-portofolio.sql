@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 06 Des 2022 pada 17.23
+-- Waktu pembuatan: 07 Des 2022 pada 17.14
 -- Versi server: 10.4.25-MariaDB
 -- Versi PHP: 8.1.10
 
@@ -40,7 +40,9 @@ CREATE TABLE `halaman` (
 --
 
 INSERT INTO `halaman` (`id`, `judul`, `isi`, `created_at`, `updated_at`) VALUES
-(1, 'Membuat Tampilan Layout Website Sederhana Dengan HTML dan CSS', '<p style=\"padding: 0px 0px 1em; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; outline: none; list-style: none; border: 0px none; color: rgb(51, 51, 51); font-family: &quot;Times New Roman&quot;, Times, serif;\">Layout situs merupakan tata letak elemen halaman situs web.Layout situs yang baik akan menjadikan halaman web web baik juga. Dengan desain halaman web yang baik dan tepat akan membuat pengunjung merasa nyaman dengan tampilan (layout) halaman web tersebut, dan tetap dapat fokus pada isi (content). Desain halaman web tidak mengganggu kejelasan bagian isi. Pada desain layout yang tepat, pengunjung dapat berpindah ke halaman lain dengan mudah melalui navigasi yang baik, mudah dan informatif.</p><p style=\"padding: 0px 0px 1em; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; outline: none; list-style: none; border: 0px none; color: rgb(51, 51, 51); font-family: &quot;Times New Roman&quot;, Times, serif;\">Pengunjung merasa bahwa setiap halaman dari situs merupakan satu kesatuan. Setiap halaman memiliki posisi dan kesamaan tampilan (layout), yang berbeda hanya isi (content). Adanya layout tata letak yang baik dapat membuat halaman lebih cantik dan seimbang, terutama enak dilihat dan mudah dibaca. Desain layout suatu halaman web meliputi penyusunan:<br style=\"padding: 0px; margin: 0px; outline: none; list-style: none; border: 0px none;\">– pembagian tempat pada halaman<br style=\"padding: 0px; margin: 0px; outline: none; list-style: none; border: 0px none;\">– pengaturan jarak sepasi<br style=\"padding: 0px; margin: 0px; outline: none; list-style: none; border: 0px none;\">– pengelompokan teks dan grafik<br style=\"padding: 0px; margin: 0px; outline: none; list-style: none; border: 0px none;\">– serta penekanan pada suatu bagian tertentu</p>', '2022-11-30 08:45:04', '2022-11-30 20:13:03');
+(1, 'Interest', '<p style=\"padding: 0px 0px 1em; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; outline: none; list-style: none; border: 0px none; color: rgb(51, 51, 51); font-family: &quot;Times New Roman&quot;, Times, serif;\">Layout situs merupakan tata letak elemen halaman situs web.Layout situs yang baik akan menjadikan halaman web web baik juga. Dengan desain halaman web yang baik dan tepat akan membuat pengunjung merasa nyaman dengan tampilan (layout) halaman web tersebut, dan tetap dapat fokus pada isi (content). Desain halaman web tidak mengganggu kejelasan bagian isi. Pada desain layout yang tepat, pengunjung dapat berpindah ke halaman lain dengan mudah melalui navigasi yang baik, mudah dan informatif.</p><p style=\"padding: 0px 0px 1em; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; outline: none; list-style: none; border: 0px none; color: rgb(51, 51, 51); font-family: &quot;Times New Roman&quot;, Times, serif;\">Pengunjung merasa bahwa setiap halaman dari situs merupakan satu kesatuan. Setiap halaman memiliki posisi dan kesamaan tampilan (layout), yang berbeda hanya isi (content). Adanya layout tata letak yang baik dapat membuat halaman lebih cantik dan seimbang, terutama enak dilihat dan mudah dibaca. Desain layout suatu halaman web meliputi penyusunan:<br style=\"padding: 0px; margin: 0px; outline: none; list-style: none; border: 0px none;\">– pembagian tempat pada halaman<br style=\"padding: 0px; margin: 0px; outline: none; list-style: none; border: 0px none;\">– pengaturan jarak sepasi<br style=\"padding: 0px; margin: 0px; outline: none; list-style: none; border: 0px none;\">– pengelompokan teks dan grafik<br style=\"padding: 0px; margin: 0px; outline: none; list-style: none; border: 0px none;\">– serta penekanan pada suatu bagian tertentu</p>', '2022-11-30 08:45:04', '2022-12-07 16:06:29'),
+(8, 'Awards', '<p>Hello</p>', '2022-12-07 15:52:10', '2022-12-07 15:52:10'),
+(9, 'Syaiful Iqbal', '<p>Hello World</p>', '2022-12-07 15:52:24', '2022-12-07 15:52:24');
 
 -- --------------------------------------------------------
 
@@ -62,7 +64,21 @@ CREATE TABLE `metadata` (
 
 INSERT INTO `metadata` (`id`, `meta_key`, `meta_value`, `created_at`, `updated_at`) VALUES
 (4, '_language', 'HTML, PHP, javascript, codeigniter, php, css3', '2022-12-06 15:46:57', '2022-12-06 16:06:30'),
-(6, '_workflow', '<ul><li>Gitlab</li><li>Github</li></ul>', '2022-12-06 15:49:14', '2022-12-06 16:06:03');
+(6, '_workflow', '<ul><li>Gitlab</li><li>Github</li></ul>', '2022-12-06 15:49:14', '2022-12-06 16:06:03'),
+(8, '_foto', '221207101019 .jpg', '2022-12-07 14:50:42', '2022-12-07 15:10:19'),
+(9, '_email', 'ballsky@gmail.com', '2022-12-07 15:02:53', '2022-12-07 15:36:11'),
+(10, '_kota', 'Pekalongan', '2022-12-07 15:36:11', '2022-12-07 15:36:11'),
+(11, '_provinsi', 'Jawa Tengah', '2022-12-07 15:36:11', '2022-12-07 15:36:11'),
+(12, '_nohp', '087736006938', '2022-12-07 15:36:11', '2022-12-07 15:36:11'),
+(13, '_facebook', 'Syaiful Iqbal', '2022-12-07 15:36:11', '2022-12-07 15:36:11'),
+(14, '_twitter', '@Ballsky26', '2022-12-07 15:36:11', '2022-12-07 15:36:11'),
+(15, '_instagram', '@syaiful_iqbal26', '2022-12-07 15:36:11', '2022-12-07 15:36:11'),
+(16, '_linkedin', 'Syaiful Iqbal', '2022-12-07 15:36:11', '2022-12-07 15:36:11'),
+(17, '_github', '@Ballsky26', '2022-12-07 15:36:11', '2022-12-07 15:36:11'),
+(18, 'halaman_about', '1', '2022-12-07 15:56:50', '2022-12-07 16:01:56'),
+(19, '_halaman_about', '9', '2022-12-07 16:05:34', '2022-12-07 16:12:22'),
+(20, '_halaman_interest', '1', '2022-12-07 16:12:22', '2022-12-07 16:12:22'),
+(21, '_halaman_awards', '8', '2022-12-07 16:12:22', '2022-12-07 16:12:22');
 
 -- --------------------------------------------------------
 
@@ -188,13 +204,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT untuk tabel `halaman`
 --
 ALTER TABLE `halaman`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT untuk tabel `metadata`
 --
 ALTER TABLE `metadata`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT untuk tabel `migrations`

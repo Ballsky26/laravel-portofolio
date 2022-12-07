@@ -96,6 +96,14 @@
               <i class="menu-icon tf-icons bx bx-cube-alt"></i>
               <div data-i18n="Misc">Skill</div>
             </a>
+            <a href="{{ route('profile.index') }}" class="menu-link">
+              <i class="menu-icon tf-icons bx bx-user me-2"></i>
+              <div data-i18n="Misc">Profile</div>
+            </a>
+            <a href="{{ route('pengaturanhalaman.index') }}" class="menu-link">
+              <i class="menu-icon tf-icons bx bx-collection"></i>
+              <div data-i18n="Misc">Pengaturan Halaman</div>
+            </a>
           </li>
 
           <li class="menu-header small text-uppercase">
