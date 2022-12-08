@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\authController;
+use App\Http\Controllers\depanController;
 use App\Http\Controllers\educationController;
 use App\Http\Controllers\experienceController;
 use App\Http\Controllers\halamanController;
@@ -22,9 +23,12 @@ use Laravel\Socialite\Facades\Socialite;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+Route::get('/', [depanController::class, 'index']);
+
+
 Route::redirect('home', 'dashboard');
 Route::get('/auth', [authController::class, 'index'])->name('login')->middleware('guest');
 Route::get('/auth/redirect', [authController::class, "redirect"])->middleware('guest');
